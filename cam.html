@@ -9,7 +9,7 @@
   <meta property="og:description" content="A focused browser workflow from DXF or SVG geometry to GRBL-compatible G-code.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.onemanlabs.org/cam.html">
-  <meta property="og:image" content="https://www.onemanlabs.org/assets/og.png">
+  <meta property="og:image" content="https://www.onemanlabs.org/assets/cam/cam-machine-setup.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://www.onemanlabs.org/cam.html">
   <title>CAM — One Man Labs</title>
@@ -52,13 +52,12 @@
       </div>
     </header>
 
-    <section class="project-art page-shell reveal">
-      <div class="cam-workbench" role="img" aria-label="Diagram of the CAM workspace with operations, geometry, toolpaths, and machine settings">
-        <aside aria-label="Toolpath operations"><strong>Operations</strong><span>Contour / outside</span><span>Pocket / finish</span><span>Drill / peck</span><b>+ Add operation</b></aside>
-        <div class="cam-viewport"><i class="stock"></i><i class="toolpath one"></i><i class="toolpath two"></i><em></em><small>Top · 0.00 in</small></div>
-        <aside aria-label="Machine settings"><strong>Machine</strong><span>Stock 12 × 8 × 0.75</span><span>Tool 0.25 flat</span><span>Safe Z 0.20</span><b>Simulate cut</b></aside>
-      </div>
-      <p><span>03A</span> One workspace connects geometry, operations, toolpaths, simulation, and machine data.</p>
+    <section class="project-screen page-shell reveal">
+      <button class="image-button" type="button" data-lightbox="assets/cam/cam-machine-setup.png" aria-label="Open the CAM machine setup screenshot">
+        <img src="assets/cam/cam-machine-setup.png" alt="CAM machine, spindle, work area, and stock material settings" width="3024" height="1724">
+        <span>Expand image ↗</span>
+      </button>
+      <p><span>03A</span> Machine, spindle, work-area, and stock settings beside the CNC workspace.</p>
     </section>
 
     <section class="section project-overview">
@@ -86,9 +85,25 @@
       </div>
     </section>
 
+    <section class="section project-gallery">
+      <div class="page-shell">
+        <div class="section-label reveal"><span>03</span> Product views</div>
+        <div class="gallery-grid">
+          <figure class="reveal">
+            <button class="image-button" type="button" data-lightbox="assets/cam/cam-tool-library.png" aria-label="Open the CAM tool library screenshot"><img src="assets/cam/cam-tool-library.png" alt="CAM tool library with flat end mills and a V-bit" loading="lazy" width="3024" height="1722"><span>Expand image ↗</span></button>
+            <figcaption>Tool library</figcaption>
+          </figure>
+          <figure class="reveal">
+            <button class="image-button" type="button" data-lightbox="assets/cam/cam-file-import.png" aria-label="Open the CAM file import screenshot"><img src="assets/cam/cam-file-import.png" alt="CAM import panel for DXF and SVG files" loading="lazy" width="3024" height="1722"><span>Expand image ↗</span></button>
+            <figcaption>DXF and SVG import</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="section architecture-section">
       <div class="page-shell architecture-grid">
-        <div class="section-label reveal"><span>03</span> Local architecture</div>
+        <div class="section-label reveal"><span>04</span> Local architecture</div>
         <div class="architecture-copy reveal">
           <h2>Client-side by design.</h2>
           <p>CAM has no server component. The browser parses the input, keeps the project state, makes the toolpaths, runs the simulation, and writes the G-code.</p>
@@ -117,6 +132,7 @@
     </div>
   </footer>
 
+  <dialog class="lightbox" aria-label="Screenshot viewer"><button class="lightbox-close" type="button" aria-label="Close screenshot">Close ×</button><img src="assets/cam/cam-machine-setup.png" alt="Expanded CAM screenshot"></dialog>
   <script src="script.js" defer></script>
 </body>
 </html>
