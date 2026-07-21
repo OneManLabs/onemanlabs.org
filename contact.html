@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Start a conversation with One Man Labs about a software, hardware, or AI system.">
+  <meta name="theme-color" content="#090b0a">
+  <meta property="og:title" content="Contact — One Man Labs">
+  <meta property="og:description" content="Bring an ambitious idea to One Man Labs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.onemanlabs.org/contact.html">
+  <meta property="og:image" content="https://www.onemanlabs.org/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.onemanlabs.org/contact.html">
+  <title>Contact — One Man Labs</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" href="assets/orchestra/orchestra-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="One Man Labs home"><span class="brand-mark">OML</span><span class="brand-name">One Man Labs</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-menu" id="site-menu" aria-label="Primary navigation"><a href="work.html">Portfolio</a><a href="studio.html">Studio</a><a class="active" href="contact.html" aria-current="page">Contact</a><a class="external-link" href="https://github.com/OneManLabs" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+  </header>
+
+  <main id="main" class="contact-page">
+    <div class="page-shell contact-page-grid">
+      <section class="contact-intro reveal">
+        <p class="eyebrow"><span></span> Start a conversation</p>
+        <h1>What are you<br><em>trying to build?</em></h1>
+        <p>Describe the outcome, what already exists, and the part that feels uncertain. A rough idea is enough; the first step is finding the shape of the system.</p>
+        <div class="contact-notes"><div><span>Good fit</span><p>Products where software, AI, infrastructure, hardware, or native applications overlap.</p></div><div><span>Useful context</span><p>Who it is for, the environment it operates in, important constraints, and what success looks like.</p></div></div>
+        <a class="inline-link" href="https://github.com/OneManLabs" target="_blank" rel="noopener noreferrer">One Man Labs on GitHub ↗</a>
+      </section>
+
+      <form id="contact-form" class="contact-form reveal" novalidate>
+        <div class="form-status" role="status" aria-live="polite" hidden></div>
+        <div class="form-row"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required><span class="field-error" data-error-for="name"></span></div>
+        <div class="form-row"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required><span class="field-error" data-error-for="email"></span></div>
+        <div class="form-row"><label for="message">Project context <span class="char-count">0 / 1200</span></label><textarea id="message" name="message" rows="7" maxlength="1200" placeholder="What do you want to make?" required></textarea><span class="field-error" data-error-for="message"></span></div>
+        <button class="button button-primary" type="submit">Send to the lab <span>↗</span></button>
+        <p class="form-note">Messages are handled through Formspree. Do not include passwords, private keys, health information, or other sensitive data.</p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="page-shell footer-layout"><a class="site-brand footer-brand" href="index.html"><span class="brand-mark">OML</span><span class="brand-name">One Man Labs</span></a><p>Independent product &amp; R&amp;D studio<br>Software · Hardware · AI systems</p><nav aria-label="Footer navigation"><a href="work.html">Portfolio</a><a href="studio.html">Studio</a><a href="contact.html">Contact</a></nav><p>© <span id="year">2026</span> One Man Labs</p></div></footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

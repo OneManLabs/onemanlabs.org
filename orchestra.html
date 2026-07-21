@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Orchestra is a distributed Codex harness and compute-fleet control plane from One Man Labs.">
+  <meta name="theme-color" content="#090b0a">
+  <meta property="og:title" content="Orchestra — One Man Labs">
+  <meta property="og:description" content="One private command center for every computer you own.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.onemanlabs.org/orchestra.html">
+  <meta property="og:image" content="https://www.onemanlabs.org/assets/orchestra/fleet-canvas.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.onemanlabs.org/orchestra.html">
+  <title>Orchestra — One Man Labs</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" href="assets/orchestra/orchestra-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="One Man Labs home"><span class="brand-mark">OML</span><span class="brand-name">One Man Labs</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-menu" id="site-menu" aria-label="Primary navigation">
+      <a class="active" href="work.html" aria-current="page">Portfolio</a>
+      <a href="studio.html">Studio</a>
+      <a href="contact.html">Contact</a>
+      <a class="external-link" href="https://github.com/OneManLabs" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="project-hero page-shell">
+      <a class="back-link reveal" href="work.html">← Portfolio</a>
+      <div class="project-hero-grid">
+        <div class="project-identity reveal">
+          <img src="assets/orchestra/orchestra-icon.png" width="92" height="92" alt="Orchestra icon">
+          <div><p>OML / 001 · Public release</p><h1>Orchestra</h1></div>
+        </div>
+        <div class="project-position reveal">
+          <h2>A distributed Codex harness and compute-fleet control plane.</h2>
+          <p>Orchestra turns the computers you already own into one private operating layer for Codex sessions, jobs, files, telemetry, power, and approvals.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="https://github.com/OneManLabs/orchestra" target="_blank" rel="noopener noreferrer">View on GitHub <span>↗</span></a>
+            <a class="button button-quiet" href="https://github.com/OneManLabs/orchestra#quick-start" target="_blank" rel="noopener noreferrer">Quick start</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="project-screen page-shell reveal">
+      <button class="image-button" type="button" data-lightbox="assets/orchestra/fleet-canvas.png" aria-label="Open the Orchestra fleet canvas screenshot">
+        <img src="assets/orchestra/fleet-canvas.png" alt="Orchestra Canvas displaying a synthetic eight-device fleet" width="2048" height="1248">
+        <span>Expand image ↗</span>
+      </button>
+      <p><span>01A</span> Live fleet topology and telemetry shown with privacy-safe synthetic data.</p>
+    </section>
+
+    <section class="section project-overview">
+      <div class="page-shell overview-grid">
+        <div class="section-label reveal"><span>01</span> Why it exists</div>
+        <div class="overview-copy reveal">
+          <h2>Serious work rarely lives on one computer.</h2>
+          <p>Development files sit on a laptop. Training belongs on a GPU workstation. Archives live on a NAS. Services run on an always-on machine. The usual answer is a growing collection of SSH aliases, dashboards, scripts, and mental bookkeeping.</p>
+          <p>Orchestra replaces that collection with a shared control plane. Core knows the fleet and coordinates work. Agents keep execution, credentials, files, and compute on their own machines. Clients provide one coherent interface from wherever you are.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-system">
+      <div class="page-shell">
+        <div class="section-label reveal"><span>02</span> The system</div>
+        <div class="system-features">
+          <article class="reveal"><span>01</span><h3>See the whole fleet</h3><p>Live topology, hardware, storage, network, temperature, availability, maintenance state, and activity in one operational view.</p></article>
+          <article class="reveal"><span>02</span><h3>Route work intentionally</h3><p>Choose a device directly or let availability, load, locality, role, power, cost, and temperature inform placement.</p></article>
+          <article class="reveal"><span>03</span><h3>Take Codex to the files</h3><p>Run a real Codex app-server on the selected machine so its workspace, tools, skills, authentication, and compute stay local.</p></article>
+          <article class="reveal"><span>04</span><h3>Operate from anywhere</h3><p>Use the desktop client, responsive web interface, native iOS app, or macOS menu bar while Core maintains shared state.</p></article>
+          <article class="reveal"><span>05</span><h3>Keep approvals explicit</h3><p>Structured permissions, scoped tokens, device-bound credentials, audit records, and host opt-in preserve the safety boundaries.</p></article>
+          <article class="reveal"><span>06</span><h3>Move more than prompts</h3><p>Coordinate jobs, pipelines, files, artifacts, telemetry, diagnostics, previews, and guarded power controls across devices.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-gallery">
+      <div class="page-shell">
+        <div class="section-label reveal"><span>03</span> Product views</div>
+        <div class="gallery-grid">
+          <figure class="gallery-wide reveal">
+            <button class="image-button" type="button" data-lightbox="assets/orchestra/orchestra-system.png" aria-label="Open the Orchestra System screenshot"><img src="assets/orchestra/orchestra-system.png" alt="Orchestra System answering a synthetic GPU telemetry request" loading="lazy" width="2048" height="1033"><span>Expand image ↗</span></button>
+            <figcaption>Conversational fleet control</figcaption>
+          </figure>
+          <figure class="reveal">
+            <button class="image-button" type="button" data-lightbox="assets/orchestra/codex-device-mentions.png" aria-label="Open the device mentions screenshot"><img src="assets/orchestra/codex-device-mentions.png" alt="Routing a Codex session with an at-device mention" loading="lazy" width="2048" height="1357"><span>Expand image ↗</span></button>
+            <figcaption>Route sessions with @ mentions</figcaption>
+          </figure>
+          <figure class="reveal">
+            <button class="image-button" type="button" data-lightbox="assets/orchestra/codex-slash-commands.png" aria-label="Open the slash commands screenshot"><img src="assets/orchestra/codex-slash-commands.png" alt="Controlling a Codex session with slash commands" loading="lazy" width="2048" height="1357"><span>Expand image ↗</span></button>
+            <figcaption>Control sessions with / commands</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architecture-section">
+      <div class="page-shell architecture-grid">
+        <div class="section-label reveal"><span>04</span> Architecture</div>
+        <div class="architecture-copy reveal">
+          <h2>Central coordination.<br>Local execution.</h2>
+          <p>The architecture is deliberately asymmetric. Orchestra Core owns fleet identity, routing, projects, sessions, approvals, and live state. Device Agents own local execution, credentials, files, previews, telemetry, and hardware access.</p>
+          <div class="architecture-flow" role="img" aria-label="Clients connect to Core, which coordinates device Agents">
+            <div><span>Clients</span><small>Desktop · Web · iOS</small></div><i>→</i><div class="flow-core"><span>Core</span><small>Identity · State · Routing</small></div><i>→</i><div><span>Agents</span><small>Mac · GPU · NAS · Linux</small></div>
+          </div>
+          <p class="muted">Tailscale is the recommended private network layer. Orchestra adds its own authentication, authorization, policy, and audit boundaries above the network.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-release">
+      <div class="page-shell release-grid reveal">
+        <div><p class="eyebrow">Source available</p><h2>Run it on your own fleet.</h2></div>
+        <div><p>Evaluation, education, personal projects, and qualifying nonprofit use are free. Business use requires prior written permission and agreed terms from One Man Labs.</p><a class="button button-primary" href="https://github.com/OneManLabs/orchestra" target="_blank" rel="noopener noreferrer">Get Orchestra on GitHub <span>↗</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-layout">
+      <a class="site-brand footer-brand" href="index.html"><span class="brand-mark">OML</span><span class="brand-name">One Man Labs</span></a>
+      <p>Independent product &amp; R&amp;D studio<br>Software · Hardware · AI systems</p>
+      <nav aria-label="Footer navigation"><a href="work.html">Portfolio</a><a href="studio.html">Studio</a><a href="contact.html">Contact</a></nav>
+      <p>© <span id="year">2026</span> One Man Labs</p>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Screenshot viewer"><button class="lightbox-close" type="button" aria-label="Close screenshot">Close ×</button><img src="assets/orchestra/fleet-canvas.png" alt="Expanded Orchestra screenshot"></dialog>
+  <script src="script.js" defer></script>
+</body>
+</html>

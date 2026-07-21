@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected software, hardware, and AI systems from One Man Labs.">
+  <meta name="theme-color" content="#090b0a">
+  <meta property="og:title" content="Portfolio — One Man Labs">
+  <meta property="og:description" content="Selected systems from One Man Labs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.onemanlabs.org/work.html">
+  <meta property="og:image" content="https://www.onemanlabs.org/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.onemanlabs.org/work.html">
+  <title>Portfolio — One Man Labs</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" href="assets/orchestra/orchestra-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="One Man Labs home"><span class="brand-mark">OML</span><span class="brand-name">One Man Labs</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-menu" id="site-menu" aria-label="Primary navigation">
+      <a class="active" href="work.html" aria-current="page">Portfolio</a>
+      <a href="studio.html">Studio</a>
+      <a href="contact.html">Contact</a>
+      <a class="external-link" href="https://github.com/OneManLabs" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="page-hero page-shell">
+      <p class="eyebrow reveal"><span></span> Portfolio / selected systems</p>
+      <h1 class="reveal">Work from<br><em>the lab.</em></h1>
+      <div class="page-hero-copy reveal">
+        <p>Products, research systems, and working prototypes spanning distributed compute, autonomous machines, developer tools, and interactive hardware.</p>
+        <p class="muted">Public work is shown in detail. Active research is intentionally described at a higher level.</p>
+      </div>
+    </header>
+
+    <section class="section portfolio-list">
+      <div class="page-shell">
+        <article class="portfolio-feature reveal">
+          <a class="portfolio-image" href="orchestra.html">
+            <img src="assets/orchestra/fleet-canvas.png" alt="Orchestra compute fleet interface" width="2048" height="1248">
+          </a>
+          <div class="portfolio-copy">
+            <div class="project-meta"><span>001</span><span>Public release</span><span>2026</span></div>
+            <h2><a href="orchestra.html">Orchestra</a></h2>
+            <p>A distributed Codex harness and compute-fleet control plane. Orchestra connects the machines you already own and routes work to the right hardware from one private interface.</p>
+            <div class="tag-row"><span>Distributed systems</span><span>Codex</span><span>Desktop + iOS</span></div>
+            <a class="inline-link" href="orchestra.html">Read the case study ↗</a>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <a class="project-card reveal" href="nimbus.html">
+            <div class="project-card-top"><span>002</span><span>Research prototype</span></div>
+            <div class="project-glyph glyph-nimbus" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+            <h2>Droneforge / Nimbus</h2>
+            <p>A visual autonomy environment connecting real-time computer vision, ELRS drone control, telemetry, and reusable AI skill blocks.</p>
+            <div class="tag-row"><span>C++</span><span>Computer vision</span><span>Embedded control</span></div>
+          </a>
+
+          <a class="project-card reveal" href="ai-grand-prix.html">
+            <div class="project-card-top"><span>003</span><span>Active research</span></div>
+            <div class="project-glyph glyph-racing" aria-hidden="true"><i></i><i></i><b></b></div>
+            <h2>AI Grand Prix</h2>
+            <p>An autonomous drone-racing stack for perception, guidance, control, simulation, replay analysis, and GPU-assisted training.</p>
+            <div class="tag-row"><span>Autonomy</span><span>Simulation</span><span>GPU training</span></div>
+          </a>
+
+          <a class="project-card reveal" href="drone-part-picker.html">
+            <div class="project-card-top"><span>004</span><span>Product prototype</span></div>
+            <div class="project-glyph glyph-parts" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <h2>Drone Part Picker</h2>
+            <p>A compatibility-aware component catalog and build configurator for assembling compliant drone systems with fewer integration surprises.</p>
+            <div class="tag-row"><span>Product data</span><span>Compatibility engine</span><span>Next.js</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio-note">
+      <div class="page-shell narrow-callout reveal">
+        <p class="eyebrow">The archive is growing</p>
+        <h2>Not everything belongs on a public page.</h2>
+        <p>Some systems are still being tested, contain private infrastructure, or were built under another brand. They will appear here when the work can be shown honestly and safely.</p>
+        <a class="button button-primary" href="contact.html">Discuss a project <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-layout">
+      <a class="site-brand footer-brand" href="index.html"><span class="brand-mark">OML</span><span class="brand-name">One Man Labs</span></a>
+      <p>Independent product &amp; R&amp;D studio<br>Software · Hardware · AI systems</p>
+      <nav aria-label="Footer navigation"><a href="work.html">Portfolio</a><a href="studio.html">Studio</a><a href="contact.html">Contact</a></nav>
+      <p>© <span id="year">2026</span> One Man Labs</p>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

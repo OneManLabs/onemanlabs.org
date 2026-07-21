@@ -1,68 +1,54 @@
 (function () {
   "use strict";
 
-  var nav = document.querySelector(".site-nav");
-  var toggle = document.querySelector(".nav-toggle");
-  var navLinks = document.getElementById("nav-links");
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".menu-toggle");
+  var menu = document.getElementById("site-menu");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function closeNavigation() {
-    if (!toggle || !navLinks) return;
+  function closeMenu() {
+    if (!toggle || !menu) return;
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-label", "Open navigation");
-    navLinks.classList.remove("open");
+    menu.classList.remove("open");
     document.body.classList.remove("nav-open");
-    if (nav) nav.classList.remove("menu-visible");
+    if (header) header.classList.remove("menu-open");
   }
 
-  if (toggle && navLinks) {
+  if (toggle && menu) {
     toggle.addEventListener("click", function () {
       var open = toggle.getAttribute("aria-expanded") !== "true";
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
-      navLinks.classList.toggle("open", open);
+      menu.classList.toggle("open", open);
       document.body.classList.toggle("nav-open", open);
-      if (nav) nav.classList.toggle("menu-visible", open);
+      if (header) header.classList.toggle("menu-open", open);
     });
 
-    navLinks.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", closeNavigation);
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMenu);
     });
 
     document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") closeNavigation();
+      if (event.key === "Escape") closeMenu();
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 760) closeMenu();
     });
   }
 
-  function updateNav() {
-    if (nav) nav.classList.toggle("scrolled", window.scrollY > 16);
+  function updateHeader() {
+    if (header) header.classList.toggle("scrolled", window.scrollY > 12);
   }
 
-  window.addEventListener("scroll", updateNav, { passive: true });
-  updateNav();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+  updateHeader();
 
-  var sectionLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-  var sections = document.querySelectorAll("main section[id]");
-
-  if ("IntersectionObserver" in window && sectionLinks.length) {
-    var sectionObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        sectionLinks.forEach(function (link) {
-          link.classList.toggle("active", link.getAttribute("href") === "#" + entry.target.id);
-        });
-      });
-    }, { rootMargin: "-32% 0px -60% 0px" });
-
-    sections.forEach(function (section) {
-      sectionObserver.observe(section);
-    });
-  }
-
-  var revealItems = document.querySelectorAll(".reveal");
+  var reveals = document.querySelectorAll(".reveal");
 
   if (reduceMotion || !("IntersectionObserver" in window)) {
-    revealItems.forEach(function (item) { item.classList.add("visible"); });
+    reveals.forEach(function (item) { item.classList.add("visible"); });
   } else {
     var revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -70,11 +56,9 @@
         entry.target.classList.add("visible");
         revealObserver.unobserve(entry.target);
       });
-    }, { threshold: 0.08, rootMargin: "0px 0px -35px" });
+    }, { threshold: 0.08, rootMargin: "0px 0px -28px" });
 
-    revealItems.forEach(function (item) {
-      revealObserver.observe(item);
-    });
+    reveals.forEach(function (item) { revealObserver.observe(item); });
   }
 
   var lightbox = document.querySelector(".lightbox");
@@ -83,10 +67,11 @@
 
   document.querySelectorAll("[data-lightbox]").forEach(function (button) {
     button.addEventListener("click", function () {
-      if (!lightbox || !lightboxImage) return;
+      if (!lightbox || !lightboxImage || typeof lightbox.showModal !== "function") return;
+      var image = button.querySelector("img");
       lightboxImage.src = button.getAttribute("data-lightbox");
-      lightboxImage.alt = button.querySelector("img") ? button.querySelector("img").alt : "Expanded screenshot";
-      if (typeof lightbox.showModal === "function") lightbox.showModal();
+      lightboxImage.alt = image ? image.alt : "Expanded project screenshot";
+      lightbox.showModal();
     });
   });
 
@@ -101,8 +86,9 @@
     });
   }
 
-  var year = document.getElementById("year");
-  if (year) year.textContent = String(new Date().getFullYear());
+  document.querySelectorAll("#year").forEach(function (year) {
+    year.textContent = String(new Date().getFullYear());
+  });
 
   var form = document.getElementById("contact-form");
   if (!form) return;
@@ -118,24 +104,26 @@
     });
   }
 
-  function setError(field, text) {
+  function setError(field, errorText) {
     var error = form.querySelector('[data-error-for="' + field.name + '"]');
-    if (error) error.textContent = text;
-    field.classList.toggle("invalid", Boolean(text));
-    field.setAttribute("aria-invalid", text ? "true" : "false");
+    if (error) error.textContent = errorText;
+    field.classList.toggle("invalid", Boolean(errorText));
+    field.setAttribute("aria-invalid", errorText ? "true" : "false");
   }
 
   function validate() {
     var valid = true;
     form.querySelectorAll("input, textarea").forEach(function (field) {
       var value = field.value.trim();
-      var error = "";
-      if (!value) error = "This field is required.";
+      var errorText = "";
+
+      if (!value) errorText = "This field is required.";
       if (value && field.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-        error = "Enter a valid email address.";
+        errorText = "Enter a valid email address.";
       }
-      setError(field, error);
-      if (error) valid = false;
+
+      setError(field, errorText);
+      if (errorText) valid = false;
     });
     return valid;
   }
@@ -146,11 +134,11 @@
     });
   });
 
-  function showStatus(kind, text) {
+  function showStatus(kind, messageText) {
     if (!status) return;
     status.hidden = false;
     status.className = "form-status " + kind;
-    status.textContent = text;
+    status.textContent = messageText;
   }
 
   form.addEventListener("submit", function (event) {

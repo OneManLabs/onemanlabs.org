@@ -21,7 +21,7 @@ jobs:
           node-version: 22
 
       - name: Validate HTML
-        run: npx --yes html-validate@latest index.html
+        run: npx --yes html-validate@latest "*.html"
 
       - name: Validate JavaScript
         run: node --check script.js
@@ -33,4 +33,4 @@ jobs:
           --package @secretlint/secretlint-rule-preset-recommend@latest
           secretlint
           --secretlintrcJSON '{"rules":[{"id":"@secretlint/secretlint-rule-preset-recommend"}]}'
-          README.md SECURITY.md index.html style.css script.js robots.txt sitemap.xml
+          README.md SECURITY.md *.html style.css script.js robots.txt sitemap.xml
