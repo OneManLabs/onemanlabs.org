@@ -51,6 +51,7 @@ body.nav-open {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 button,
@@ -611,6 +612,8 @@ em {
 
 .feature-image img {
   width: 100%;
+  aspect-ratio: 2589 / 1602;
+  object-fit: contain;
   transition: transform 0.55s cubic-bezier(.2,.7,.2,1), filter 0.4s ease;
 }
 
@@ -794,6 +797,8 @@ em {
 
 .portfolio-image img {
   width: 100%;
+  aspect-ratio: 2589 / 1602;
+  object-fit: contain;
   transition: transform 0.5s ease;
 }
 
@@ -853,7 +858,8 @@ em {
 .project-grid {
   padding-top: clamp(60px, 8vw, 110px);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: minmax(300px, 640px);
+  justify-content: end;
 }
 
 .project-card {
@@ -1240,6 +1246,8 @@ em {
 
 .image-button img {
   width: 100%;
+  height: auto;
+  object-fit: contain;
   transition: transform 0.5s ease, filter 0.3s ease;
 }
 
