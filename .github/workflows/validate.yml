@@ -1,0 +1,36 @@
+name: Validate website
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate HTML
+        run: npx --yes html-validate@latest index.html
+
+      - name: Validate JavaScript
+        run: node --check script.js
+
+      - name: Scan text files for secrets
+        run: >-
+          npx --yes
+          --package secretlint@latest
+          --package @secretlint/secretlint-rule-preset-recommend@latest
+          secretlint
+          --secretlintrcJSON '{"rules":[{"id":"@secretlint/secretlint-rule-preset-recommend"}]}'
+          README.md SECURITY.md index.html style.css script.js robots.txt sitemap.xml
