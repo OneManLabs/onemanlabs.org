@@ -526,43 +526,6 @@ em {
   color: var(--text);
 }
 
-.scroll-cue {
-  position: absolute;
-  z-index: 3;
-  bottom: 28px;
-  left: var(--gutter);
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  color: var(--text-dim);
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.scroll-cue i {
-  width: 48px;
-  height: 1px;
-  overflow: hidden;
-  background: var(--line-strong);
-}
-
-.scroll-cue i::after {
-  content: "";
-  display: block;
-  width: 18px;
-  height: 1px;
-  background: var(--acid);
-  animation: scan 2.2s ease-in-out infinite;
-}
-
-@keyframes scan {
-  0%, 100% { transform: translateX(-20px); }
-  50% { transform: translateX(52px); }
-}
-
 .section-featured {
   background: var(--bg-soft);
 }
@@ -1836,10 +1799,6 @@ em {
 
   .build-status {
     justify-self: stretch;
-  }
-
-  .scroll-cue {
-    display: none;
   }
 
   .feature-split,
