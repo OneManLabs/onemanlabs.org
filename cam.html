@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CAM is an open-source browser CNC application from One Man Labs.">
+  <meta name="theme-color" content="#090b0a">
+  <meta property="og:title" content="CAM — One Man Labs">
+  <meta property="og:description" content="A focused browser workflow from DXF or SVG geometry to GRBL-compatible G-code.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.onemanlabs.org/cam.html">
+  <meta property="og:image" content="https://www.onemanlabs.org/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.onemanlabs.org/cam.html">
+  <title>CAM — One Man Labs</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" type="image/svg+xml" href="assets/oml-favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="site-brand" href="index.html" aria-label="One Man Labs home"><span class="brand-name">One Man Labs</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-menu" id="site-menu" aria-label="Primary navigation">
+      <a class="active" href="work.html" aria-current="page">Portfolio</a>
+      <a href="studio.html">Studio</a>
+      <a href="contact.html">Contact</a>
+      <a class="external-link" href="https://github.com/OneManLabs" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="project-hero page-shell">
+      <a class="back-link reveal" href="work.html">← Portfolio</a>
+      <div class="project-hero-grid">
+        <div class="project-identity reveal">
+          <img src="assets/cam/cam-icon.svg" width="92" height="92" alt="CAM icon">
+          <div><p>OML / 003 · Open source</p><h1>CAM</h1></div>
+        </div>
+        <div class="project-position reveal">
+          <h2>A CNC workflow that does the job.</h2>
+          <p>I built CAM because I hate Carbide 3D software. I needed a small application that works for my purposes: import geometry, define the cut, examine the result, and export usable G-code.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="https://github.com/OneManLabs/cam" target="_blank" rel="noopener noreferrer">View on GitHub <span>↗</span></a>
+            <a class="button button-quiet" href="https://github.com/OneManLabs/cam#start-cam" target="_blank" rel="noopener noreferrer">Quick start</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="project-art page-shell reveal">
+      <div class="cam-workbench" role="img" aria-label="Diagram of the CAM workspace with operations, geometry, toolpaths, and machine settings">
+        <aside aria-label="Toolpath operations"><strong>Operations</strong><span>Contour / outside</span><span>Pocket / finish</span><span>Drill / peck</span><b>+ Add operation</b></aside>
+        <div class="cam-viewport"><i class="stock"></i><i class="toolpath one"></i><i class="toolpath two"></i><em></em><small>Top · 0.00 in</small></div>
+        <aside aria-label="Machine settings"><strong>Machine</strong><span>Stock 12 × 8 × 0.75</span><span>Tool 0.25 flat</span><span>Safe Z 0.20</span><b>Simulate cut</b></aside>
+      </div>
+      <p><span>03A</span> One workspace connects geometry, operations, toolpaths, simulation, and machine data.</p>
+    </section>
+
+    <section class="section project-overview">
+      <div class="page-shell overview-grid">
+        <div class="section-label reveal"><span>01</span> Why it exists</div>
+        <div class="overview-copy reveal">
+          <h2>A shorter path from design to cut.</h2>
+          <p>CAM removes the parts of a CNC workflow that were getting in the way. It runs in the browser, keeps project data on the device, and focuses on the operations needed for practical GRBL machines.</p>
+          <p>The software is fully open source under the MIT License. The project includes the application, geometry engine, toolpath generators, simulation worker, tests, and technical documentation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-system">
+      <div class="page-shell">
+        <div class="section-label reveal"><span>02</span> The workflow</div>
+        <div class="system-features">
+          <article class="reveal"><span>01</span><h3>Import geometry</h3><p>Read DXF and SVG files, then identify open paths, closed contours, and pocket regions.</p></article>
+          <article class="reveal"><span>02</span><h3>Prepare the design</h3><p>Move, scale, rotate, align, mirror, or create simple geometry in the workspace.</p></article>
+          <article class="reveal"><span>03</span><h3>Set the machine</h3><p>Define the work area, stock, origin, safe height, spindle, and cutting tool data.</p></article>
+          <article class="reveal"><span>04</span><h3>Build toolpaths</h3><p>Create contour, pocket, and drill operations with ordered depth passes and holding tabs.</p></article>
+          <article class="reveal"><span>05</span><h3>Examine the cut</h3><p>View the geometry and toolpaths in Three.js, then simulate material removal in a Web Worker.</p></article>
+          <article class="reveal"><span>06</span><h3>Export for GRBL</h3><p>Generate RS274 output with rapid, linear, arc, spindle, tool-change, and retract commands.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architecture-section">
+      <div class="page-shell architecture-grid">
+        <div class="section-label reveal"><span>03</span> Local architecture</div>
+        <div class="architecture-copy reveal">
+          <h2>Client-side by design.</h2>
+          <p>CAM has no server component. The browser parses the input, keeps the project state, makes the toolpaths, runs the simulation, and writes the G-code.</p>
+          <div class="architecture-flow" role="img" aria-label="Geometry moves through operations and simulation to G-code">
+            <div><span>Geometry</span><small>DXF · SVG · Shapes</small></div><i>→</i><div class="flow-core"><span>Operations</span><small>Contour · Pocket · Drill</small></div><i>→</i><div><span>Output</span><small>Simulation · GRBL</small></div>
+          </div>
+          <p class="muted">The simulation is a visual aid, not a machine-safety system. Always inspect the code and do a dry run before a cut.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-release">
+      <div class="page-shell release-grid reveal">
+        <div><p class="eyebrow">MIT licensed</p><h2>Use it. Change it. Make it better.</h2></div>
+        <div><p>CAM is fully open source. It includes setup instructions, technical documentation, contribution guidance, security reporting, automated tests, and CI.</p><a class="button button-primary" href="https://github.com/OneManLabs/cam" target="_blank" rel="noopener noreferrer">Get CAM on GitHub <span>↗</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-layout">
+      <a class="site-brand footer-brand" href="index.html"><span class="brand-mark">OML</span><span class="brand-name">One Man Labs</span></a>
+      <p>Independent product &amp; R&amp;D studio<br>Software · Hardware · AI systems</p>
+      <nav aria-label="Footer navigation"><a href="work.html">Portfolio</a><a href="studio.html">Studio</a><a href="contact.html">Contact</a></nav>
+      <p>© <span id="year">2026</span> One Man Labs</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

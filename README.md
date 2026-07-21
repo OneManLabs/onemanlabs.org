@@ -7,6 +7,8 @@ The public website for [One Man Labs](https://www.onemanlabs.org/), an independe
 The site presents a growing portfolio of product and research systems. Each project has a dedicated case-study page; public repositories are linked from the relevant project.
 
 - [Orchestra](https://github.com/OneManLabs/orchestra) — distributed Codex harness and compute-fleet control plane
+- [Forge](https://github.com/OneManLabs/forge) — model-agnostic AI design studio
+- [CAM](https://github.com/OneManLabs/cam) — open-source browser CNC and G-code application
 - Drone Part Picker — compatibility-aware drone component configurator
 
 All Orchestra imagery used here was captured with synthetic data and contains no private fleet credentials, addresses, or device identities.
@@ -19,7 +21,7 @@ This is a dependency-free static site. Serve the repository directory with any l
 
 - `index.html` — home page
 - `work.html` — portfolio index
-- `orchestra.html`, `drone-part-picker.html` — project case studies
+- `orchestra.html`, `forge.html`, `cam.html`, `drone-part-picker.html` — project case studies
 - `studio.html` — studio capabilities and process
 - `contact.html` — project inquiry page
 - `style.css` — responsive design and motion
