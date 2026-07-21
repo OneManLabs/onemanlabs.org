@@ -5,10 +5,10 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url><loc>https://www.onemanlabs.org/work.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.onemanlabs.org/orchestra.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.onemanlabs.org/forge.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.onemanlabs.org/cam.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.onemanlabs.org/studio.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.onemanlabs.org/contact.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.onemanlabs.org/work</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.onemanlabs.org/orchestra</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onemanlabs.org/forge</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onemanlabs.org/cam</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onemanlabs.org/studio</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.onemanlabs.org/contact</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
 </urlset>
