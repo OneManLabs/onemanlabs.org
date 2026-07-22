@@ -9,6 +9,9 @@
   <url><loc>https://www.onemanlabs.org/orchestra</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.onemanlabs.org/forge</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.onemanlabs.org/cam</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onemanlabs.org/wound-vision</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onemanlabs.org/cvd</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onemanlabs.org/orbit</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.onemanlabs.org/studio</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.onemanlabs.org/contact</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
 </urlset>

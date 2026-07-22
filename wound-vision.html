@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wound Vision is a native iOS clinician-assist application for wound measurement and graft-size documentation.">
+  <meta name="theme-color" content="#090b0a">
+  <meta property="og:title" content="Wound Vision — One Man Labs">
+  <meta property="og:description" content="On-device wound measurement with LiDAR, TrueDepth, and Core ML.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.onemanlabs.org/wound-vision">
+  <meta property="og:image" content="https://www.onemanlabs.org/assets/wound-vision/home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.onemanlabs.org/wound-vision">
+  <title>Wound Vision — One Man Labs</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" type="image/svg+xml" href="assets/oml-favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="site-brand" href="/" aria-label="One Man Labs home"><span class="brand-name">One Man Labs</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-menu" id="site-menu" aria-label="Primary navigation">
+      <a class="active" href="/work" aria-current="page">Portfolio</a>
+      <a href="/studio">Studio</a>
+      <a href="/contact">Contact</a>
+      <a class="external-link" href="https://github.com/OneManLabs" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="project-hero page-shell">
+      <a class="back-link reveal" href="/work">← Portfolio</a>
+      <div class="project-hero-grid">
+        <div class="project-identity text-identity reveal">
+          <img src="assets/wound-vision/icon.png" width="1024" height="1024" alt="Wound Vision icon">
+          <div><p>OML / 004 · Public release</p><h1>Wound Vision</h1></div>
+        </div>
+        <div class="project-position reveal">
+          <h2>On-device wound measurement for clinical documentation.</h2>
+          <p>Wound Vision uses supported iPhone depth sensors and a local Core ML model to record wound geometry, review measurements, and prepare graft-size recommendations.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="https://github.com/OneManLabs/wound-vision" target="_blank" rel="noopener noreferrer">View on GitHub <span>↗</span></a>
+            <a class="button button-quiet" href="https://github.com/OneManLabs/wound-vision#build-the-application" target="_blank" rel="noopener noreferrer">Build guide</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="project-screen project-screen-phone page-shell reveal">
+      <button class="image-button" type="button" data-lightbox="assets/wound-vision/home.png" aria-label="Open the Wound Vision screenshot">
+        <img src="assets/wound-vision/home.png" alt="Wound Vision empty patient workspace on iPhone" width="1206" height="2622">
+        <span>Expand image ↗</span>
+      </button>
+      <p><span>04A</span> Native iOS patient workspace with local data storage.</p>
+    </section>
+
+    <section class="section project-overview">
+      <div class="page-shell overview-grid">
+        <div class="section-label reveal"><span>01</span> Why it exists</div>
+        <div class="overview-copy reveal">
+          <h2>Capture useful measurements at the point of care.</h2>
+          <p>Manual wound measurements can be slow and difficult to compare over time. Wound Vision provides one guided workflow for image capture, depth analysis, perimeter review, volume calculation, and documentation.</p>
+          <p>The application keeps its model and patient records on the device. It does not require an account, analytics service, or remote inference API.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-system">
+      <div class="page-shell">
+        <div class="section-label reveal"><span>02</span> The system</div>
+        <div class="system-features">
+          <article class="reveal"><span>01</span><h3>Guided capture</h3><p>Use LiDAR, TrueDepth, or imported photographs with capture-quality guidance.</p></article>
+          <article class="reveal"><span>02</span><h3>Local analysis</h3><p>Run segmentation and measurement functions on the iPhone with Core ML.</p></article>
+          <article class="reveal"><span>03</span><h3>Surface geometry</h3><p>Calculate perimeter, area, depth, volume, and a reference surface from captured data.</p></article>
+          <article class="reveal"><span>04</span><h3>Human review</h3><p>Review and adjust the detected perimeter before a result is stored.</p></article>
+          <article class="reveal"><span>05</span><h3>Longitudinal records</h3><p>Keep capture history and compare measurements across visits.</p></article>
+          <article class="reveal"><span>06</span><h3>Exportable reports</h3><p>Create a document for the clinical record after the operator reviews the result.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-release">
+      <div class="page-shell release-grid reveal">
+        <div><p class="eyebrow">Source available</p><h2>Inspect the implementation.</h2></div>
+        <div><p>Wound Vision is a clinician-assist and documentation tool. It is not a diagnostic device. The repository uses the PolyForm Noncommercial License 1.0.0.</p><a class="button button-primary" href="https://github.com/OneManLabs/wound-vision" target="_blank" rel="noopener noreferrer">Get Wound Vision <span>↗</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-layout">
+      <a class="site-brand footer-brand" href="/"><span class="brand-mark">OML</span><span class="brand-name">One Man Labs</span></a>
+      <p>Independent product &amp; R&amp;D studio<br>Software · Hardware · AI systems</p>
+      <nav aria-label="Footer navigation"><a href="/work">Portfolio</a><a href="/studio">Studio</a><a href="/contact">Contact</a></nav>
+      <p>© <span id="year">2026</span> One Man Labs</p>
+    </div>
+  </footer>
+  <dialog class="lightbox" aria-label="Screenshot viewer"><button class="lightbox-close" type="button" aria-label="Close screenshot">Close ×</button><img src="assets/wound-vision/home.png" alt="Expanded Wound Vision screenshot"></dialog>
+  <script src="script.js" defer></script>
+</body>
+</html>

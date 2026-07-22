@@ -772,6 +772,36 @@ em {
   transform: scale(1.016);
 }
 
+.portfolio-image-phone {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(114, 217, 177, 0.12), transparent 40%),
+    var(--surface);
+}
+
+.portfolio-image-phone img {
+  width: min(38%, 330px);
+  aspect-ratio: auto;
+  filter: drop-shadow(0 28px 60px rgba(0, 0, 0, 0.42));
+}
+
+.project-screen-phone .image-button {
+  min-height: min(75svh, 900px);
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(114, 217, 177, 0.12), transparent 36%),
+    var(--surface);
+}
+
+.project-screen-phone .image-button img {
+  width: min(42%, 430px);
+  max-height: 820px;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 72px rgba(0, 0, 0, 0.48));
+}
+
 .project-meta {
   display: flex;
   justify-content: space-between;
@@ -1743,6 +1773,18 @@ em {
 
   .portfolio-feature {
     gap: 45px;
+  }
+
+  .portfolio-image-phone img {
+    width: min(58%, 300px);
+  }
+
+  .project-screen-phone .image-button {
+    min-height: 620px;
+  }
+
+  .project-screen-phone .image-button img {
+    width: min(72%, 360px);
   }
 
   .portfolio-feature + .portfolio-feature {

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Orbit is an open-source browser-based 3D model viewer with optional hand-gesture controls.">
+  <meta name="theme-color" content="#090b0a">
+  <meta property="og:title" content="Orbit — One Man Labs">
+  <meta property="og:description" content="Inspect and manipulate 3D models with standard controls or hand gestures.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.onemanlabs.org/orbit">
+  <meta property="og:image" content="https://www.onemanlabs.org/assets/orbit/workspace.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.onemanlabs.org/orbit">
+  <title>Orbit — One Man Labs</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" type="image/svg+xml" href="assets/oml-favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="site-brand" href="/" aria-label="One Man Labs home"><span class="brand-name">One Man Labs</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-menu" id="site-menu" aria-label="Primary navigation">
+      <a class="active" href="/work" aria-current="page">Portfolio</a>
+      <a href="/studio">Studio</a>
+      <a href="/contact">Contact</a>
+      <a class="external-link" href="https://github.com/OneManLabs" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="project-hero page-shell">
+      <a class="back-link reveal" href="/work">← Portfolio</a>
+      <div class="project-hero-grid">
+        <div class="project-identity reveal">
+          <img src="assets/orbit/icon.png" width="256" height="256" alt="Orbit icon">
+          <div><p>OML / 006 · Open source</p><h1>Orbit</h1></div>
+        </div>
+        <div class="project-position reveal">
+          <h2>A direct, spatial way to inspect 3D models.</h2>
+          <p>Orbit is a browser-based STL viewer built with Three.js. It supports standard model controls and optional MediaPipe hand tracking that runs in the browser.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="https://github.com/OneManLabs/orbit" target="_blank" rel="noopener noreferrer">View on GitHub <span>↗</span></a>
+            <a class="button button-quiet" href="https://github.com/OneManLabs/orbit#start-orbit" target="_blank" rel="noopener noreferrer">Start guide</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="project-screen page-shell reveal">
+      <button class="image-button" type="button" data-lightbox="assets/orbit/workspace.png" aria-label="Open the Orbit workspace screenshot">
+        <img src="assets/orbit/workspace.png" alt="Orbit 3D model workspace with a spacecraft model" width="3024" height="1720">
+        <span>Expand image ↗</span>
+      </button>
+      <p><span>06A</span> Browser-based model inspection with no server-side camera processing.</p>
+    </section>
+
+    <section class="section project-overview">
+      <div class="page-shell overview-grid">
+        <div class="section-label reveal"><span>01</span> Why it exists</div>
+        <div class="overview-copy reveal">
+          <h2>Move around the model without moving through menus.</h2>
+          <p>Orbit provides a focused workspace for model inspection. A user can rotate, move, scale, separate, isolate, and capture a model with direct controls.</p>
+          <p>When gesture control is enabled, MediaPipe processes webcam frames in the browser. Orbit does not send camera frames to an application server.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-system">
+      <div class="page-shell">
+        <div class="section-label reveal"><span>02</span> The system</div>
+        <div class="system-features">
+          <article class="reveal"><span>01</span><h3>STL import</h3><p>Open an STL file or start with an included demonstration model.</p></article>
+          <article class="reveal"><span>02</span><h3>Direct controls</h3><p>Rotate, move, and scale the model with pointer or touch input.</p></article>
+          <article class="reveal"><span>03</span><h3>Gesture input</h3><p>Use optional hand tracking for spatial model manipulation.</p></article>
+          <article class="reveal"><span>04</span><h3>Assembly inspection</h3><p>Explode an assembly or isolate a selected component.</p></article>
+          <article class="reveal"><span>05</span><h3>View controls</h3><p>Select camera presets, display options, and workspace settings.</p></article>
+          <article class="reveal"><span>06</span><h3>Local capture</h3><p>Save the current model view as an image from the browser.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-gallery">
+      <div class="page-shell">
+        <div class="section-label reveal"><span>03</span> Product view</div>
+        <div class="gallery-grid">
+          <figure class="gallery-wide reveal">
+            <button class="image-button" type="button" data-lightbox="assets/orbit/controls.png" aria-label="Open the Orbit controls screenshot"><img src="assets/orbit/controls.png" alt="Orbit inspection and camera controls" loading="lazy" width="3024" height="1724"><span>Expand image ↗</span></button>
+            <figcaption>Model, camera, and gesture controls</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-release">
+      <div class="page-shell release-grid reveal">
+        <div><p class="eyebrow">Open source</p><h2>Inspect, modify, and extend it.</h2></div>
+        <div><p>Orbit is available under the MIT License. The repository includes the browser assets, demonstration models, setup guide, and third-party notices.</p><a class="button button-primary" href="https://github.com/OneManLabs/orbit" target="_blank" rel="noopener noreferrer">Get Orbit <span>↗</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-layout">
+      <a class="site-brand footer-brand" href="/"><span class="brand-mark">OML</span><span class="brand-name">One Man Labs</span></a>
+      <p>Independent product &amp; R&amp;D studio<br>Software · Hardware · AI systems</p>
+      <nav aria-label="Footer navigation"><a href="/work">Portfolio</a><a href="/studio">Studio</a><a href="/contact">Contact</a></nav>
+      <p>© <span id="year">2026</span> One Man Labs</p>
+    </div>
+  </footer>
+  <dialog class="lightbox" aria-label="Screenshot viewer"><button class="lightbox-close" type="button" aria-label="Close screenshot">Close ×</button><img src="assets/orbit/workspace.png" alt="Expanded Orbit screenshot"></dialog>
+  <script src="script.js" defer></script>
+</body>
+</html>
