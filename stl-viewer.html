@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="STL Viewer is an open-source native iOS viewer for STL and STEP files.">
+  <meta name="theme-color" content="#090b0a">
+  <meta property="og:title" content="STL Viewer — One Man Labs">
+  <meta property="og:description" content="Open, inspect, measure, and share STL and STEP models on iPhone.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.onemanlabs.org/stl-viewer">
+  <meta property="og:image" content="https://www.onemanlabs.org/assets/stl-viewer/home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.onemanlabs.org/stl-viewer">
+  <title>STL Viewer — One Man Labs</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" type="image/svg+xml" href="assets/oml-favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="site-brand" href="/" aria-label="One Man Labs home"><span class="brand-name">One Man Labs</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-menu" id="site-menu" aria-label="Primary navigation">
+      <a class="active" href="/work" aria-current="page">Portfolio</a>
+      <a href="/studio">Studio</a>
+      <a href="/contact">Contact</a>
+      <a class="external-link" href="https://github.com/OneManLabs" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="project-hero page-shell">
+      <a class="back-link reveal" href="/work">← Portfolio</a>
+      <div class="project-hero-grid">
+        <div class="project-identity text-identity reveal">
+          <img src="assets/stl-viewer/icon.png" width="1024" height="1024" alt="STL Viewer icon">
+          <div><p>OML / 007 · Open source</p><h1>STL Viewer</h1></div>
+        </div>
+        <div class="project-position reveal">
+          <h2>Native model inspection for iPhone.</h2>
+          <p>STL Viewer opens STL and STEP files from Files or a share sheet. It renders geometry locally and provides model information, display controls, assembly-part controls, and measurement tools.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="https://github.com/OneManLabs/stl-viewer" target="_blank" rel="noopener noreferrer">View on GitHub <span>↗</span></a>
+            <a class="button button-quiet" href="https://github.com/OneManLabs/stl-viewer#build-the-application" target="_blank" rel="noopener noreferrer">Build guide</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="project-screen project-screen-phone page-shell reveal">
+      <button class="image-button" type="button" data-lightbox="assets/stl-viewer/home.png" aria-label="Open the STL Viewer home screenshot">
+        <img src="assets/stl-viewer/home.png" alt="STL Viewer home screen on iPhone" width="682" height="1404">
+        <span>Expand image ↗</span>
+      </button>
+      <p><span>07A</span> Native iOS workspace with local file processing.</p>
+    </section>
+
+    <section class="section project-overview">
+      <div class="page-shell overview-grid">
+        <div class="section-label reveal"><span>01</span> Why it exists</div>
+        <div class="overview-copy reveal">
+          <h2>Inspect CAD files without a desktop workflow.</h2>
+          <p>STL Viewer provides a focused mobile workflow for model review. It opens common mesh and CAD exchange files without an account or remote conversion service.</p>
+          <p>The application processes model files on the device. It does not include analytics, advertisements, tracking, or a model-upload service.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-system">
+      <div class="page-shell">
+        <div class="section-label reveal"><span>02</span> The system</div>
+        <div class="system-features">
+          <article class="reveal"><span>01</span><h3>STL support</h3><p>Open binary and ASCII STL files from Files or another application.</p></article>
+          <article class="reveal"><span>02</span><h3>STEP support</h3><p>Import STEP and STP geometry with the Open CASCADE engine.</p></article>
+          <article class="reveal"><span>03</span><h3>Local rendering</h3><p>Build and display SceneKit geometry directly on the device.</p></article>
+          <article class="reveal"><span>04</span><h3>Assembly controls</h3><p>Show, hide, or isolate parts in a supported STEP assembly.</p></article>
+          <article class="reveal"><span>05</span><h3>Model review</h3><p>Inspect dimensions, triangle count, file size, and display modes.</p></article>
+          <article class="reveal"><span>06</span><h3>Measurement</h3><p>Measure the distance between two selected surface points.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-gallery">
+      <div class="page-shell">
+        <div class="section-label reveal"><span>03</span> Native import</div>
+        <div class="gallery-grid">
+          <figure class="reveal">
+            <button class="image-button" type="button" data-lightbox="assets/stl-viewer/files.png" aria-label="Open the STL Viewer Files screenshot"><img src="assets/stl-viewer/files.png" alt="STL Viewer folder in the iOS file picker" loading="lazy" width="666" height="1366"><span>Expand image ↗</span></button>
+            <figcaption>Browse local and cloud file locations</figcaption>
+          </figure>
+          <figure class="reveal">
+            <button class="image-button" type="button" data-lightbox="assets/stl-viewer/recents.png" aria-label="Open the STL Viewer recents screenshot"><img src="assets/stl-viewer/recents.png" alt="Recent documents in the iOS file picker" loading="lazy" width="700" height="1402"><span>Expand image ↗</span></button>
+            <figcaption>Open a recent STL or STEP document</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-release">
+      <div class="page-shell release-grid reveal">
+        <div><p class="eyebrow">Open source</p><h2>Build it for your own device.</h2></div>
+        <div><p>STL Viewer is available under the MIT License. The setup guide explains how to build the required Open CASCADE libraries for iOS before you build the application.</p><a class="button button-primary" href="https://github.com/OneManLabs/stl-viewer" target="_blank" rel="noopener noreferrer">Get STL Viewer <span>↗</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-layout">
+      <a class="site-brand footer-brand" href="/"><span class="brand-mark">OML</span><span class="brand-name">One Man Labs</span></a>
+      <p>Independent product &amp; R&amp;D studio<br>Software · Hardware · AI systems</p>
+      <nav aria-label="Footer navigation"><a href="/work">Portfolio</a><a href="/studio">Studio</a><a href="/contact">Contact</a></nav>
+      <p>© <span id="year">2026</span> One Man Labs</p>
+    </div>
+  </footer>
+  <dialog class="lightbox" aria-label="Screenshot viewer"><button class="lightbox-close" type="button" aria-label="Close screenshot">Close ×</button><img src="assets/stl-viewer/home.png" alt="Expanded STL Viewer screenshot"></dialog>
+  <script src="script.js" defer></script>
+</body>
+</html>
